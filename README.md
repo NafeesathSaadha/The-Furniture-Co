@@ -3,6 +3,8 @@
 ## Live Demo
 https://nafeesathsaadha.github.io/The-Furniture-Co/
 
+---
+
 ## Overview
 
 **The Furniture Co** is a concept furniture e-commerce website developed as a front-end project. The website showcases a variety of aesthetic wooden furniture items and demonstrates the basic structure of an online furniture store.
