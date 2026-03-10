@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co. | Tables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #F5EDE1;
+            color: #5e3a35;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 25px;
+            /* padding: 10px 0; */
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .product-name-price {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .product-name-price h3 {
+            margin: 8px 0 4px;
+        }
+
+        .product-name-price p {
+            margin: 4px 0;
+            font-weight: bold;
+            color: #5e3a35;
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5;
+        }
+
+        .card-icons i {
+            background: #fff;
+            color: #5e3a35;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-icons i:hover {
+            background: #5e3a35;
+            color: #fff;
+        }
+
+        /* Description overlay inside card */
+        .description-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(94, 58, 53, 0.9);
+            color: aliceblue;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .description-overlay p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Timeless Bookshelf Collection</h1>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/474x/69/0c/57/690c57a55afb9924c302b1052a7e078e.jpg" alt="OakLine Classic Bookshelf">
+            <div class="description-overlay">
+                <p>A sturdy oak wood bookshelf with spacious open shelves, perfect for organizing books and decor.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>OakLine Classic Bookshelf</h3>
+                <p>₹5779</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/62/6c/12/626c12b7cbf6730a14905e921637968a.jpg" alt="Urban Ladder Display Shelf">
+            <div class="description-overlay">
+                <p>A modern ladder-style bookshelf with a sleek wooden finish, ideal for contemporary interiors.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Urban Ladder Display Shelf</h3>
+                <p>₹4799</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/d2/be/1a/d2be1a75a4243b84806fc9ca84e8268e.jpg" alt="Heritage Walnut Book Cabinet">
+            <div class="description-overlay">
+                <p>A premium walnut wood cabinet with closed storage and open display sections for an elegant look.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Heritage Walnut Book Cabinet</h3>
+                <p>₹8299</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/44/d7/87/44d787f858a44815911d6e72f8477e1a.jpg" alt="GeoCube Modern Bookshelf">
+            <div class="description-overlay">
+                <p>A contemporary geometric bookshelf featuring cube-style compartments for stylish organization.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>GeoCube Modern Bookshelf</h3>
+                <p>₹6390</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/9a/db/9c/9adb9ca447f0f2ff8477021f8407dc8e.jpg" alt="TallTower Vertical Shelf">
+            <div class="description-overlay">
+                <p>A tall vertical wooden bookshelf designed to maximize storage while saving floor space.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>TallTower Vertical Shelf</h3>
+                <p>₹4420</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/c6/70/4f/c6704f5169f5f8f575fcba9ebd3d49d4.jpg" alt="NordicStyle Open Book Rack">
+            <div class="description-overlay">
+                <p>A Scandinavian-inspired wooden bookshelf with open airy design and smooth matte finish.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>NordicStyle Open Book Rack</h3>
+                <p>₹4110</p>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/94/b7/38/94b7384d9dba2c6014627e7dc55d775b.jpg" alt="TreeAura Wooden Bookshelf">
+            <div class="description-overlay">
+                <p>A creative wooden bookshelf with branch-style compartments, designed to add artistic charm while neatly displaying books and decor.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>TreeAura Wooden Bookshelf</h3>
+                <p>₹13499</p>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/a7/02/f4/a702f4c80fad413cebef2cf8fb2b005d.jpg" alt="Minimalist Book Rack">
+            <div class="description-overlay">
+                <p>A durable Sheesham wood bookshelf with natural grain texture and strong multi-tier storage.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Minimalist Book Rack</h3>
+                <p>₹6666</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.card-icons i').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent triggering image click
+                let type = icon.getAttribute('data-type'); // wishlist or cart
+                let productCard = icon.closest('.product-card');
+                let name = productCard.querySelector('h3').innerText;
+                let priceText = productCard.querySelector('.product-name-price p').innerText.trim();
+                let price = Number(priceText.replace(/[^0-9]/g, ''));
+                let image = productCard.querySelector('img').src;
+
+                let items = JSON.parse(localStorage.getItem(type)) || [];
+
+                if (!items.find(p => p.name === name)) {
+                    items.push({ name, price, image });
+                    localStorage.setItem(type, JSON.stringify(items));
+                    alert(`${name} added to ${type}!`);
+                } else {
+                    alert(`${name} is already in your ${type}!`);
+                }
+            });
+        });
+
+        // Toggle description overlay when clicking on image/card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName === 'I') return; // ignore icon clicks
+                let overlay = card.querySelector('.description-overlay');
+                overlay.style.opacity = overlay.style.opacity == 1 ? 0 : 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

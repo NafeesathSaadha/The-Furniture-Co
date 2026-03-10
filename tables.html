@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co. | Tables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #F5EDE1;
+            color: #5e3a35;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 25px;
+            /* padding: 10px 0; */
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .product-name-price {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .product-name-price h3 {
+            margin: 8px 0 4px;
+        }
+
+        .product-name-price p {
+            margin: 4px 0;
+            font-weight: bold;
+            color: #5e3a35;
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5;
+        }
+
+        .card-icons i {
+            background: #fff;
+            color: #5e3a35;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-icons i:hover {
+            background: #5e3a35;
+            color: #fff;
+        }
+
+        /* Description overlay inside card */
+        .description-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(94, 58, 53, 0.9);
+            color: aliceblue;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .description-overlay p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Elegant Table Collection</h1>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/17/29/5e/17295e7caa7978fb9f36ddba5d1e1771.jpg" alt="Classic Oak Dining Table">
+            <div class="description-overlay">
+                <p>Handcrafted from solid oak wood, this table adds timeless elegance to your dining room. Durable and
+                    stylish, it fits both classic and modern interiors.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Classic Oak Dining Table</h3>
+                <p>₹149999</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/bb/19/2b/bb192bd2bb2f43327dd93204d70d08df.jpg" alt="Modern Walnut Table">
+            <div class="description-overlay">
+                <p>Elegant walnut finish with sleek lines—perfect for modern homes. A versatile table for dining or work
+                    that elevates your interior décor.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Modern Walnut Table</h3>
+                <p>₹122499</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/87/3e/8f/873e8fe9f7b60dadec96991745ca8b30.jpg" alt="Rustic Coffee Table">
+            <div class="description-overlay">
+                <p>Bring warmth and charm to your living area with this rustic wooden coffee table. Its textured design
+                    and sturdy build make it ideal for cozy spaces.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Rustic Coffee Table</h3>
+                <p>₹12299</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/ff/54/19/ff54197876e1e9ac6ef234cecbb48f92.jpg" alt="Glass Top Dining Table">
+            <div class="description-overlay">
+                <p>Minimalist glass tabletop with solid wooden legs, ideal for contemporary interiors. Easy to maintain
+                    and adds a touch of sophistication.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Glass Top Dining Table</h3>
+                <p>₹36999</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/75/9f/06/759f0666b5021d60d26fb3a834025149.jpg" alt="Compact Study Table">
+            <div class="description-overlay">
+                <p>Compact design perfect for study or home office. Functional, sturdy, and stylish, fitting in small to
+                    medium spaces effortlessly.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Compact Study Table</h3>
+                <p>₹14499</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/ac/ce/0c/acce0c6979ac759d2afd354560905813.jpg" alt="Round Dining Table">
+            <div class="description-overlay">
+                <p>Perfect for cozy gatherings, this round table creates a warm dining experience. Smooth finish and
+                    durable wood for lasting use.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Round Dining Table</h3>
+                <p>₹99299</p>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/09/65/4f/09654f781d2ec0042c22e841312e63ce.jpg" alt="Marble Finish Table">
+            <div class="description-overlay">
+                <p>Elegant marble pattern tabletop adds luxury and grace. Perfect for dining or living areas, combining
+                    beauty with functionality.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Marble Finish Table</h3>
+                <p>₹155699</p>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/e7/fb/7a/e7fb7a0c0f84a120196865093576bfab.jpg" alt="Minimal Wood Table">
+            <div class="description-overlay">
+                <p>Sleek, sturdy, and simple — this minimal table enhances modern minimalist décor. Perfect for small or
+                    large living spaces.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Minimal Wood Table</h3>
+                <p>₹30299</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.card-icons i').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent triggering image click
+                let type = icon.getAttribute('data-type'); // wishlist or cart
+                let productCard = icon.closest('.product-card');
+                let name = productCard.querySelector('h3').innerText;
+                let priceText = productCard.querySelector('.product-name-price p').innerText.trim();
+                let price = Number(priceText.replace(/[^0-9]/g, ''));
+                let image = productCard.querySelector('img').src;
+
+                let items = JSON.parse(localStorage.getItem(type)) || [];
+
+                if (!items.find(p => p.name === name)) {
+                    items.push({ name, price, image });
+                    localStorage.setItem(type, JSON.stringify(items));
+                    alert(`${name} added to ${type}!`);
+                } else {
+                    alert(`${name} is already in your ${type}!`);
+                }
+            });
+        });
+
+        // Toggle description overlay when clicking on image/card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName === 'I') return; // ignore icon clicks
+                let overlay = card.querySelector('.description-overlay');
+                overlay.style.opacity = overlay.style.opacity == 1 ? 0 : 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

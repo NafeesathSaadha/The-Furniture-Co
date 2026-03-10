@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .hero-categories {
+        padding: 30px 20px 0 20px;
+        text-align: center;
+    }
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+    .category-card {
+        display: block;
+        text-decoration: none;
+        color: #5e3a35;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s ;
+        background: #fff;
+        text-align: center;
+    }
+    .category-card img {
+        width: 100%;
+        height: 400px;
+        object-fit: contain; 
+    }
+    .category-card h3 {
+        margin: 10px 0 0;
+    }
+    .category-card p {
+        font-size: 1.3rem;
+        padding: 0%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .category-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2),
+        0 10px 25px rgba(0,0,0,0.15);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="heading-container">
+        <h1>The Furniture Co.</h1>
+        <h4 class="tagline">Where elegance meets every corner of your home.</h4>
+    </div>
+    <nav class="bar">
+        <a href="login.html">Login</a>
+        <a href="index.html">Home</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact us</a>
+    </nav>
+    <h3>Explore Our Collections</h3>
+    <section class="hero-categories">
+        <div class="category-grid">
+            <a href="tables.html" class="category-card">
+                <img src="https://i.pinimg.com/1200x/f0/15/0e/f0150e8d6068a01ee2e22caff4c91983.jpg" alt="Tables">
+                <h3>Tables</h3>
+                <p>Elegant tables crafted to bring everyone together, for meals, work, and memories.</p>
+            </a>
+            <a href="chairs.html" class="category-card">
+                <img src="https://i.pinimg.com/1200x/f1/61/93/f16193c408cb2fea69126599c8f1de24.jpg" alt="Chairs">
+                <h3>Chairs</h3>
+                <p>Comfortable and stylish chairs designed to enhance every corner of your home.</p>
+            </a>
+            <a href="mirrors.html" class="category-card">
+                <img src="https://i.pinimg.com/1200x/41/a8/2f/41a82f861fcbdd3e4cd1e1ae4ec4d879.jpg" alt="Cupboards">
+                <h3>Mirrors</h3>
+                <p>Elegant wooden framed mirrors that reflect style, warmth, and timeless charm in every room.</p>
+            </a>
+            <a href="shoe-racks.html" class="category-card">
+                <img src="https://i.pinimg.com/1200x/5f/7e/e8/5f7ee8e40644a98889422c68c919be3c.jpg" alt="Shoe Racks">
+                <h3>Shoe Racks</h3>
+                <p>Organize your shoes effortlessly with our sleek and functional racks.</p>
+            </a>
+            <a href="bookshelves.html" class="category-card">
+                <img src="https://i.pinimg.com/736x/db/05/ea/db05ea1a85c61328f7b6cadbd7a8ea54.jpg" alt="Bookshelves">
+                <h3>Bookshelves</h3>
+                <p>Beautiful bookshelves to display your stories, treasures, and decor.</p>
+            </a>
+            <a href="corner-stands.html" class="category-card">
+                <img src="https://i.pinimg.com/1200x/18/1a/0c/181a0c18e2e2a35f9d25df927723caab.jpg" alt="Corner Stands">
+                <h3>Corner Stands</h3>
+                <p>Decorative corner stands that make every corner of your home shine.</p>
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>

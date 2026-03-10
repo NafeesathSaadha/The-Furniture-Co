@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co. | Tables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #F5EDE1;
+            color: #5e3a35;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 25px;
+            /* padding: 10px 0; */
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .product-name-price {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .product-name-price h3 {
+            margin: 8px 0 4px;
+        }
+
+        .product-name-price p {
+            margin: 4px 0;
+            font-weight: bold;
+            color: #5e3a35;
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5;
+        }
+
+        .card-icons i {
+            background: #fff;
+            color: #5e3a35;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-icons i:hover {
+            background: #5e3a35;
+            color: #fff;
+        }
+
+        /* Description overlay inside card */
+        .description-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(94, 58, 53, 0.9);
+            color: aliceblue;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .description-overlay p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Artistic Corner Stand Series</h1>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/9b/2f/ff/9b2fff15e331f302629e17c5d6e191f0.jpg" alt="Plantora Corner Shelf">
+            <div class="description-overlay">
+                <p>A multi-tier wooden corner plant stand designed to display indoor plants beautifully while saving space and enhancing your room’s natural aesthetic.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Plantora Corner Shelf</h3>
+                <p>₹2999</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/1e/3a/51/1e3a5122a048c4c0112efc2cf03da248.jpg" alt="GlowAura Lighted Corner Stand">
+            <div class="description-overlay">
+                <p>A modern wooden corner stand with built-in soft LED lighting, perfect for showcasing decor and creating a warm, elegant ambiance.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>GlowAura Lighted Corner Stand</h3>
+                <p>₹4009</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/0a/58/4f/0a584fe8fbf3de6d19bef274e46fa1ca.jpg" alt="SerenWood Coffee Stand">
+            <div class="description-overlay">
+                <p>A cute minimal wooden stand ideal for window corners, creating the perfect cozy spot for your coffee breaks.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>SerenWood Coffee Stand</h3>
+                <p>₹4999</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/90/ea/1e/90ea1ea1503532cddc70501a953f8f63.jpg" alt="OakBranch Organizer">
+            <div class="description-overlay">
+                <p>A tree-branch inspired wooden stand designed for hanging towels, scarves, or clothes. Its organic branching structure adds a natural, artistic touch while keeping essentials neatly organized.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>OakBranch Organizer</h3>
+                <p>₹9312</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/b8/64/57/b864575bb5fc6523d8ed3357cd1f3753.jpg" alt="DuoNest Corner Stool Stand">
+            <div class="description-overlay">
+                <p>A versatile wooden piece designed to function as both a sturdy stool and a compact corner stand. Perfect for extra seating or stylish decor display in modern spaces.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>DuoNest Corner Stool Stand</h3>
+                <p>₹2800</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/20/6a/ac/206aac430dfdebc890d94a94fa19643c.jpg" alt="StillWood Mini Stand">
+            <div class="description-overlay">
+                <p>A lightweight wooden bathroom stool designed for everyday use, perfect for holding towels, toiletries, or as a compact seating option.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>StillWood Mini Stand</h3>
+                <p>₹1999</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.card-icons i').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent triggering image click
+                let type = icon.getAttribute('data-type'); // wishlist or cart
+                let productCard = icon.closest('.product-card');
+                let name = productCard.querySelector('h3').innerText;
+                let priceText = productCard.querySelector('.product-name-price p').innerText.trim();
+                let price = Number(priceText.replace(/[^0-9]/g, ''));
+                let image = productCard.querySelector('img').src;
+
+                let items = JSON.parse(localStorage.getItem(type)) || [];
+
+                if (!items.find(p => p.name === name)) {
+                    items.push({ name, price, image });
+                    localStorage.setItem(type, JSON.stringify(items));
+                    alert(`${name} added to ${type}!`);
+                } else {
+                    alert(`${name} is already in your ${type}!`);
+                }
+            });
+        });
+
+        // Toggle description overlay when clicking on image/card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName === 'I') return; // ignore icon clicks
+                let overlay = card.querySelector('.description-overlay');
+                overlay.style.opacity = overlay.style.opacity == 1 ? 0 : 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

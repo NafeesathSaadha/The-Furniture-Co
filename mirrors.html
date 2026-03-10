@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co. | Tables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #F5EDE1;
+            color: #5e3a35;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 25px;
+            /* padding: 10px 0; */
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .product-name-price {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .product-name-price h3 {
+            margin: 8px 0 4px;
+        }
+
+        .product-name-price p {
+            margin: 4px 0;
+            font-weight: bold;
+            color: #5e3a35;
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5;
+        }
+
+        .card-icons i {
+            background: #fff;
+            color: #5e3a35;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-icons i:hover {
+            background: #5e3a35;
+            color: #fff;
+        }
+
+        /* Description overlay inside card */
+        .description-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(94, 58, 53, 0.9);
+            color: aliceblue;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .description-overlay p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Designer Mirror Collection</h1>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/78/82/5b/78825b9ed7b37f632957591b0e4cd903.jpg" alt="Classic Walnut Dressing Mirror">
+            <div class="description-overlay">
+                <p>A full-length dressing mirror framed with finely finished walnut wood. Ideal for bedrooms, it combines functionality with timeless wooden elegance.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Classic Walnut Dressing Mirror</h3>
+                <p>₹4999</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/74/a8/85/74a885facfd6c2f3188cd8418bbee265.jpg" alt="Luna Curve Asymmetrical Mirror">
+            <div class="description-overlay">
+                <p>An artistic asymmetrical mirror with smooth flowing curves and a polished wooden frame. Its unique wave-like design makes it a statement piece for modern living rooms and bedrooms.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Luna Curve Asymmetrical Mirror</h3>
+                <p>₹5099</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/d6/a2/e2/d6a2e23a0f69e9f4a4bd8b84cc6777c8.jpg" alt="Halo Round Frame Mirror">
+            <div class="description-overlay">
+                <p>A perfectly circular mirror framed with solid oak wood. The clean round shape creates balance and softness, ideal for entryways and vanity spaces.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Halo Round Frame Mirror</h3>
+                <p>₹3299</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/c5/9f/db/c59fdbc4fcd2c1d31d7442b36ed95853.jpg" alt="BloomPetal Artistic Mirror">
+            <div class="description-overlay">
+                <p>A floral-inspired mirror with soft petal-shaped wooden curves, designed to add an elegant decorative touch to your space.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>BloomPetal Artistic Mirror</h3>
+                <p>₹8299</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/ad/88/1a/ad881a4176518eb1df14e6fdd4e536fe.jpg" alt="Pebble Edge Organic Mirror">
+            <div class="description-overlay">
+                <p>Designed with soft uneven curves resembling a natural pebble, this wooden frame mirror adds a contemporary artistic touch to interiors.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Pebble Edge Organic Mirror</h3>
+                <p>₹7499</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/3d/56/f5/3d56f5508fb40ee3dafb975f34e590fd.jpg" alt="WaveLine Sculpted Mirror">
+            <div class="description-overlay">
+                <p>A modern mirror featuring sculpted wave-like curves along the wooden frame. Perfect for stylish bedrooms and creative studio spaces.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>WaveLine Sculpted Mirror</h3>
+                <p>₹4099</p>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/8c/eb/ae/8cebae74dd4e3f6d427cf9afe6aa77d5.jpg" alt="WovenWood Rectangular Mirror">
+            <div class="description-overlay">
+                <p>A Handwoven wooden frame mirror with a clean rectangular design and warm natural finish.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>WovenWood Rectangular Mirror</h3>
+                <p>₹3699</p>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/41/a8/2f/41a82f861fcbdd3e4cd1e1ae4ec4d879.jpg" alt="Archwood Crescent Mirror">
+            <div class="description-overlay">
+                <p>A semi-arched mirror inspired by classic architectural designs. The curved wooden frame adds elegance and height to any wall.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Archwood Crescent Mirror</h3>
+                <p>₹3399</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.card-icons i').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent triggering image click
+                let type = icon.getAttribute('data-type'); // wishlist or cart
+                let productCard = icon.closest('.product-card');
+                let name = productCard.querySelector('h3').innerText;
+                let priceText = productCard.querySelector('.product-name-price p').innerText.trim();
+                let price = Number(priceText.replace(/[^0-9]/g, ''));
+                let image = productCard.querySelector('img').src;
+
+                let items = JSON.parse(localStorage.getItem(type)) || [];
+
+                if (!items.find(p => p.name === name)) {
+                    items.push({ name, price, image });
+                    localStorage.setItem(type, JSON.stringify(items));
+                    alert(`${name} added to ${type}!`);
+                } else {
+                    alert(`${name} is already in your ${type}!`);
+                }
+            });
+        });
+
+        // Toggle description overlay when clicking on image/card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName === 'I') return; // ignore icon clicks
+                let overlay = card.querySelector('.description-overlay');
+                overlay.style.opacity = overlay.style.opacity == 1 ? 0 : 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

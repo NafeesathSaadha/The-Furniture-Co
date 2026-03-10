@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co. | Tables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #F5EDE1;
+            color: #5e3a35;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 25px;
+            /* padding: 10px 0; */
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .product-name-price {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .product-name-price h3 {
+            margin: 8px 0 4px;
+        }
+
+        .product-name-price p {
+            margin: 4px 0;
+            font-weight: bold;
+            color: #5e3a35;
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5;
+        }
+
+        .card-icons i {
+            background: #fff;
+            color: #5e3a35;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-icons i:hover {
+            background: #5e3a35;
+            color: #fff;
+        }
+
+        /* Description overlay inside card */
+        .description-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(94, 58, 53, 0.9);
+            color: aliceblue;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .description-overlay p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Premium Seating Collection</h1>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/01/ba/d5/01bad5782dd024f938ec4b6a9ce0750b.jpg" alt="Aurora Lounge Chair">
+            <div class="description-overlay">
+                <p>A modern lounge chair with soft cushioning and sleek wooden legs, perfect for cozy corners or living
+                    rooms.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Aurora Lounge Chair</h3>
+                <p>₹6999</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/73/7b/fd/737bfd3fa0607da8e2549328124fb7ea.jpg" alt="Maplewood Dining Chair">
+            <div class="description-overlay">
+                <p>Crafted from premium maple wood, this chair blends comfort with classic dining elegance.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Maplewood Dining Chair</h3>
+                <p>₹7499</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/36/45/b5/3645b53a66dd78e8e40d0110a1af5d4b.jpg" alt="Velvet Haven Accent Chair">
+            <div class="description-overlay">
+                <p>Wrapped in plush velvet, this chair adds a luxurious touch to any bedroom or reading nook.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Velvet Haven Accent Chair</h3>
+                <p>₹4299</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/41/e0/33/41e033c0c6dd54f78a01312cc5a35597.jpg" alt="OakCraft Armchair">
+            <div class="description-overlay">
+                <p>A sturdy oak wood frame paired with ergonomic design for timeless comfort and durability.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>OakCraft Armchair</h3>
+                <p>₹7999</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/fd/f3/9e/fdf39ebe666295afc5536613090f8e70.jpg" alt="Serenity Cane Chair">
+            <div class="description-overlay">
+                <p>Handwoven cane seat with a minimalist wooden structure — light, airy, and naturally elegant.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Serenity Cane Chair</h3>
+                <p>₹4499</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/bb/00/8f/bb008f6b4bac558bd7c7c539b411eaba.jpg" alt="UrbanEdge Study Chair">
+            <div class="description-overlay">
+                <p>Designed for modern workspaces, this sleek chair offers posture support with a stylish wooden finish. </p>
+            </div>
+            <div class="product-name-price">
+                <h3>UrbanEdge Study Chair</h3>
+                <p>₹3299</p>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/64/78/af/6478afab562407c72b470bf495050091.jpg" alt="Rustica Recliner Chair">
+            <div class="description-overlay">
+                <p>A blend of rustic charm and modern comfort, featuring soft upholstery and adjustable back support for
+                    ultimate relaxation.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Rustica Recliner Chair</h3>
+                <p>₹6699</p>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/40/b2/57/40b257a36814963cfcabf8371793b9a4.jpg" alt="Willow Woven Chair">
+            <div class="description-overlay">
+                <p>Crafted with natural rattan and solid wood, this lightweight chair brings warmth and texture to any cozy corner.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Willow Woven Chair</h3>
+                <p>₹8299</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.card-icons i').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent triggering image click
+                let type = icon.getAttribute('data-type'); // wishlist or cart
+                let productCard = icon.closest('.product-card');
+                let name = productCard.querySelector('h3').innerText;
+                let priceText = productCard.querySelector('.product-name-price p').innerText.trim();
+                let price = Number(priceText.replace(/[^0-9]/g, ''));
+                let image = productCard.querySelector('img').src;
+
+                let items = JSON.parse(localStorage.getItem(type)) || [];
+
+                if (!items.find(p => p.name === name)) {
+                    items.push({ name, price, image });
+                    localStorage.setItem(type, JSON.stringify(items));
+                    alert(`${name} added to ${type}!`);
+                } else {
+                    alert(`${name} is already in your ${type}!`);
+                }
+            });
+        });
+
+        // Toggle description overlay when clicking on image/card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName === 'I') return; // ignore icon clicks
+                let overlay = card.querySelector('.description-overlay');
+                overlay.style.opacity = overlay.style.opacity == 1 ? 0 : 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

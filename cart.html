@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .cart-container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .cart-item img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 10px;
+      background: #f0f0f0;
+    }
+
+    .item-details {
+      flex: 1;
+      margin-left: 20px;
+    }
+
+    .item-details h3 {
+      font-size: 18px;
+      margin: 0 0 8px;
+      color: #333;
+    }
+
+    .item-details p {
+      font-size: 16px;
+      margin: 0;
+      color: #555;
+    }
+
+    .remove-btn {
+      background-color: #5c4033;
+      border: none;
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .remove-btn:hover {
+      background-color: #7a5543;
+    }
+
+    .cart-summary {
+      text-align: right;
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    .checkout-btn {
+      display: block;
+      width: 100%;
+      background-color: #5c4033;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .checkout-btn:hover {
+      background-color: #7a5543;
+    }
+
+    .empty {
+      text-align: center;
+      color: #777;
+      margin-top: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="heading-container">
+        <h1>The Furniture Co.</h1>
+        <h4 class="tagline">Where elegance meets every corner of your home.</h4>
+    </div>
+    <nav class="bar">
+        <a href="login.html">Login</a>
+        <a href="index.html">Home</a>
+        <a href="wishlist.html">Wishlist</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact us</a>
+    </nav>
+    <div class="cart-container">
+      <h3>Your Shopping Cart</h3>
+      <div id="cart-items"></div>
+      <div id="cart-summary" class="cart-summary"></div>
+      <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+  <script>
+    // Get cart data from localStorage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const cartItemsContainer = document.getElementById("cart-items");
+    const cartSummary = document.getElementById("cart-summary");
+
+    function renderCart() {
+      cartItemsContainer.innerHTML = "";
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p class='empty'>Your cart is empty.</p>";
+        cartSummary.textContent = "";
+        document.getElementById("checkout-btn").style.display = "none";
+        return;
+      }
+
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += Number(item.price || 0);
+
+        const cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+        cartItem.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="item-details">
+            <h3>${item.name}</h3>
+            <p>₹${Number(item.price || 0).toFixed(2)}</p>
+          </div>
+          <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
+        `;
+        cartItemsContainer.appendChild(cartItem);
+      });
+
+      cartSummary.textContent = "Total: ₹" + total.toFixed(2);
+      document.getElementById("checkout-btn").style.display = "block";
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    document.getElementById("checkout-btn").addEventListener("click", () => {
+      alert("Proceeding to checkout...");
+    });
+
+    renderCart();
+  </script>
+</body>
+
+</html>

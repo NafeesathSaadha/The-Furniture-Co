@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Furniture Co. | Tables</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #F5EDE1;
+            color: #5e3a35;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 25px;
+            /* padding: 10px 0; */
+        }
+
+        .product-card {
+            position: relative;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            overflow: hidden;
+            cursor: pointer;
+            margin: 5px;
+            transition: transform 0.4s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .product-name-price {
+            padding: 10px 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .product-name-price h3 {
+            margin: 8px 0 4px;
+        }
+
+        .product-name-price p {
+            margin: 4px 0;
+            font-weight: bold;
+            color: #5e3a35;
+        }
+
+        .card-icons {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            z-index: 5;
+        }
+
+        .card-icons i {
+            background: #fff;
+            color: #5e3a35;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card-icons i:hover {
+            background: #5e3a35;
+            color: #fff;
+        }
+
+        /* Description overlay inside card */
+        .description-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(94, 58, 53, 0.9);
+            color: aliceblue;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .description-overlay p {
+            font-size: 1.3rem;
+            line-height: 1.5;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Contemporary Shoe Rack Collection</h1>
+
+    <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/67/94/a1/6794a13c559de83036a1ca658b2d65c2.jpg"
+                alt="Classic Oak Shoe Rack">
+            <div class="description-overlay">
+                <p>A sturdy oak wood shoe rack with multiple open shelves, perfect for organized and elegant storage.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Classic Oak Shoe Rack</h3>
+                <p>₹5199</p>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/c1/a9/1b/c1a91b1c725a16acf4a12d1d3ac11726.jpg"
+                alt="Urban SlimLine Shoe Rack">
+            <div class="description-overlay">
+                <p>A compact and space-saving wooden rack designed for small apartments and narrow entryways.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Urban SlimLine Shoe Rack</h3>
+                <p>₹4099</p>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/63/f1/83/63f183f8255c81847896ee6b00d6c1eb.jpg" alt="Rustic Flow Shoe Bench">
+            <div class="description-overlay">
+                <p>Live-edge wooden shoe bench with natural curves and open shelf.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Rustic Flow Shoe Bench</h3>
+                <p>₹5699</p>
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/cb/56/b2/cb56b22f6f07a9937fcaf58736067d60.jpg" alt="Rustic Sheesham Storage Rack">
+            <div class="description-overlay">
+                <p>A durable Sheesham wood rack with natural finish, offering both style and functionality.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Rustic Sheesham Storage Rack</h3>
+                <p>₹3399</p>
+            </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/736x/7c/15/4e/7c154ef9681826b0c7a04016c74b2d46.jpg" alt="Modern FlipDoor Shoe Rack">
+            <div class="description-overlay">
+                <p>A sleek wooden rack with flip-open compartments for a clean and clutter-free look.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Modern FlipDoor Shoe Rack</h3>
+                <p>₹5199</p>
+            </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/d3/e5/c9/d3e5c9a92ebf906960d486f7cbfc987e.jpg"
+                alt="Minimalist Pine Shoe Stand">
+            <div class="description-overlay">
+                <p>A lightweight pine wood stand with open shelves, ideal for daily-use footwear.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Minimalist Pine Shoe Stand</h3>
+                <p>₹2499</p>
+            </div>
+        </div>
+
+        <!-- Product 7 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/90/85/73/908573ef1df38a77dd71fa8c89a4ebc1.jpg" alt="BenchStyle Cushion Shoe Rack">
+            <div class="description-overlay">
+                <p>A dual-purpose wooden rack with a cushioned seating top for added comfort.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>BenchStyle Cushion Shoe Rack</h3>
+                <p>₹3699</p>
+            </div>
+        </div>
+
+        <!-- Product 8 -->
+        <div class="product-card">
+            <div class="card-icons">
+                <i class="fas fa-heart" data-type="wishlist"></i>
+                <i class="fas fa-shopping-cart" data-type="cart"></i>
+            </div>
+            <img src="https://i.pinimg.com/1200x/aa/66/f3/aa66f37ae14b6080b84d2cd94a2784ba.jpg"
+                alt="Royal Walnut Cabinet Shoe Rack">
+            <div class="description-overlay">
+                <p>A closed-door walnut wood shoe cabinet that keeps footwear dust-free and neatly hidden.</p>
+            </div>
+            <div class="product-name-price">
+                <h3>Royal Walnut Cabinet Shoe Rack</h3>
+                <p>₹6299</p>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.querySelectorAll('.card-icons i').forEach(icon => {
+            icon.addEventListener('click', function (e) {
+                e.stopPropagation(); // prevent triggering image click
+                let type = icon.getAttribute('data-type'); // wishlist or cart
+                let productCard = icon.closest('.product-card');
+                let name = productCard.querySelector('h3').innerText;
+                let priceText = productCard.querySelector('.product-name-price p').innerText.trim();
+                let price = Number(priceText.replace(/[^0-9]/g, ''));
+                let image = productCard.querySelector('img').src;
+
+                let items = JSON.parse(localStorage.getItem(type)) || [];
+
+                if (!items.find(p => p.name === name)) {
+                    items.push({ name, price, image });
+                    localStorage.setItem(type, JSON.stringify(items));
+                    alert(`${name} added to ${type}!`);
+                } else {
+                    alert(`${name} is already in your ${type}!`);
+                }
+            });
+        });
+
+        // Toggle description overlay when clicking on image/card
+        document.querySelectorAll('.product-card').forEach(card => {
+            card.addEventListener('click', function (e) {
+                if (e.target.tagName === 'I') return; // ignore icon clicks
+                let overlay = card.querySelector('.description-overlay');
+                overlay.style.opacity = overlay.style.opacity == 1 ? 0 : 1;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
